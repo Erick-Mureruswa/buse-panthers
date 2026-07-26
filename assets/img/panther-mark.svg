@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="BUSE Panthers angular panther head emblem">
+  <defs>
+    <linearGradient id="headFill" x1="60" y1="6" x2="60" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111722"/>
+      <stop offset="1" stop-color="#07090F"/>
+    </linearGradient>
+    <linearGradient id="eyeFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#67E8F9"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="eyeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- head silhouette -->
+  <polygon class="draw"
+    points="16,34 33,6 47,33 60,26 73,33 87,6 104,34 97,62 80,95 60,108 40,95 23,62"
+    fill="url(#headFill)" stroke="#22D3EE" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- engineered facet lines -->
+  <g stroke="#22D3EE" stroke-width="1" opacity="0.5" fill="none" stroke-linecap="round">
+    <path d="M60 26 L60 70"/>
+    <path d="M47 33 L41 52"/>
+    <path d="M73 33 L79 52"/>
+    <path d="M23 62 L40 95"/>
+    <path d="M97 62 L80 95"/>
+    <path d="M41 52 L60 70 L79 52"/>
+  </g>
+
+  <!-- eyes -->
+  <g filter="url(#eyeGlow)">
+    <polygon points="38,55 56,50 54,57 40,60" fill="url(#eyeFill)"/>
+    <polygon points="82,55 64,50 66,57 80,60" fill="url(#eyeFill)"/>
+  </g>
+
+  <!-- snout + fangs -->
+  <polygon points="60,70 53,83 67,83" fill="#0B0F18" stroke="#22D3EE" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M55 87 L57 96 L59 87 M61 87 L63 96 L65 87" fill="#EAF6FA" opacity="0.9"/>
+</svg>

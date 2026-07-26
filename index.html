@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BUSE Panthers — Cold-Blooded | Bindura University Basketball</title>
+
+<meta name="description" content="The official home of the BUSE Panthers — Bindura University of Science Education's elite basketball program. Cold by nature. Lethal by design. A digital experience engineered by ZimDevs.">
+<meta name="theme-color" content="#07090F">
+<meta name="author" content="ZimDevs — zimdevs.co.zw">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="BUSE Panthers — Cold-Blooded">
+<meta property="og:description" content="Bindura University's elite basketball program. An immersive digital experience engineered by ZimDevs.">
+<meta property="og:site_name" content="BUSE Panthers">
+
+<link rel="icon" href="assets/img/panther-mark.svg" type="image/svg+xml">
+
+<!-- Fonts: Anton (display) · Archivo (head/UI) · Inter (body) · JetBrains Mono (data) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsTeam",
+  "name": "BUSE Panthers",
+  "sport": "Basketball",
+  "memberOf": { "@type": "CollegeOrUniversity", "name": "Bindura University of Science Education" },
+  "location": { "@type": "Place", "name": "The Ice House, Bindura, Zimbabwe" },
+  "url": "https://zimdevs.co.zw"
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="grain" aria-hidden="true"></div>
+<div id="scroll-progress" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+
+<!-- SVG sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ico-panther" viewBox="0 0 120 120">
+    <defs>
+      <linearGradient id="hf" x1="60" y1="6" x2="60" y2="108" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#111722"/><stop offset="1" stop-color="#07090F"/>
+      </linearGradient>
+      <linearGradient id="ef" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#67E8F9"/><stop offset="1" stop-color="#22D3EE"/>
+      </linearGradient>
+    </defs>
+    <polygon points="16,34 33,6 47,33 60,26 73,33 87,6 104,34 97,62 80,95 60,108 40,95 23,62" fill="url(#hf)" stroke="#22D3EE" stroke-width="2" stroke-linejoin="round"/>
+    <g stroke="#22D3EE" stroke-width="1" opacity="0.5" fill="none" stroke-linecap="round">
+      <path d="M60 26 L60 70"/><path d="M47 33 L41 52"/><path d="M73 33 L79 52"/>
+      <path d="M23 62 L40 95"/><path d="M97 62 L80 95"/><path d="M41 52 L60 70 L79 52"/>
+    </g>
+    <polygon points="38,55 56,50 54,57 40,60" fill="url(#ef)"/>
+    <polygon points="82,55 64,50 66,57 80,60" fill="url(#ef)"/>
+    <polygon points="60,70 53,83 67,83" fill="#0B0F18" stroke="#22D3EE" stroke-width="1.2" stroke-linejoin="round"/>
+    <path d="M55 87 L57 96 L59 87 M61 87 L63 96 L65 87" fill="#EAF6FA" opacity="0.9"/>
+  </symbol>
+</svg>
+
+<!-- ============================ PRELOADER ============================ -->
+<div id="preloader" aria-hidden="true">
+  <svg class="pre__mark" viewBox="0 0 120 120" fill="none">
+    <polygon class="draw" pathLength="1" points="16,34 33,6 47,33 60,26 73,33 87,6 104,34 97,62 80,95 60,108 40,95 23,62" stroke="#22D3EE" stroke-width="2" stroke-linejoin="round"/>
+    <polygon class="pre-eye" points="38,55 56,50 54,57 40,60" fill="#22D3EE" opacity="0"/>
+    <polygon class="pre-eye" points="82,55 64,50 66,57 80,60" fill="#22D3EE" opacity="0"/>
+  </svg>
+  <div class="pre__bar-wrap"><div class="pre__bar"></div></div>
+  <div class="pre__meta"><span>BUSE&nbsp;PANTHERS</span><span class="pre__count">0%</span></div>
+</div>
+
+<!-- ============================ SHATTER REVEAL ============================ -->
+<!-- ice-shatter luma matte (black→white) tears the loading screen open onto the live hero -->
+<div class="reveal" id="reveal" aria-hidden="true">
+  <video class="reveal__video" muted playsinline preload="auto" disablepictureinpicture>
+    <source src="assets/video/ice-reveal.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#hero" aria-label="BUSE Panthers home" data-hover>
+    <svg aria-hidden="true"><use href="#ico-panther"></use></svg>
+    <span class="nav__logo-text">BUSE<b>·</b>PANTHERS</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#identity" data-hover>Identity</a>
+    <a href="#roster" data-hover>Roster</a>
+    <a href="#numbers" data-hover>Numbers</a>
+    <a href="#season" data-hover>Off Season</a>
+    <a href="#sponsor" data-hover>Sponsor</a>
+  </nav>
+  <a href="#zimdevs" class="btn btn--ghost nav__cta" data-hover>Built by ZimDevs</a>
+  <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+  <a href="#identity" style="--i:1"><span>01</span>Identity</a>
+  <a href="#roster" style="--i:2"><span>02</span>Roster</a>
+  <a href="#numbers" style="--i:3"><span>03</span>Numbers</a>
+  <a href="#season" style="--i:4"><span>04</span>Off Season</a>
+  <a href="#sponsor" style="--i:5"><span>05</span>Sponsor</a>
+  <a href="#zimdevs" style="--i:6"><span>★</span>ZimDevs</a>
+</div>
+
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <canvas class="hero__bg" id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero__grid" aria-hidden="true"></div>
+
+    <div class="hero__inner wrap">
+      <div class="hero__top">
+        <span class="eyebrow">Bindura University · EST. 2009</span>
+        <span class="hero__rank section-index" data-hover>ZUSA RANK <b class="accent">#01</b></span>
+      </div>
+
+      <h1 class="hero__title h-display" id="hero-title">
+        <span class="line"><span class="word">COLD</span></span>
+        <span class="line"><span class="word stroke-text">BLOODED</span></span>
+      </h1>
+
+      <div class="hero__base">
+        <p class="hero__sub">
+          The official home of the <b>BUSE Panthers</b> — Bindura's
+          apex basketball program. Cold by nature. Lethal by design.
+        </p>
+        <div class="hero__cta">
+          <a href="#roster" class="btn btn--fill" data-hover>Meet the Pride <span class="btn__icon">→</span></a>
+          <a href="#season" class="btn btn--ghost" data-hover>Next Game</a>
+        </div>
+      </div>
+
+      <div class="hero__ticker" aria-hidden="true">
+        <div class="hero__ticker-item"><span class="section-index">PPG</span><b>88.6</b></div>
+        <div class="hero__ticker-item"><span class="section-index">RECORD</span><b>21–3</b></div>
+        <div class="hero__ticker-item"><span class="section-index">STREAK</span><b class="accent">W9</b></div>
+        <div class="hero__ticker-item"><span class="section-index">TITLES</span><b>6</b></div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span><i></i>
+    </div>
+
+    <div class="hero__shutter" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <div class="hero__shutter-mark">
+        <svg viewBox="0 0 120 120"><use href="#ico-panther"></use></svg>
+        <span class="hero__shutter-word">BUSE<b>·</b>PANTHERS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ MARQUEE ============================ -->
+  <div class="marquee" aria-hidden="true" data-marquee>
+    <div class="marquee__track">
+      <span>The Ice House <em>✦</em> Cold-Blooded <em>✦</em> Apex Predators <em>✦</em> The Freezer <em>✦</em>&nbsp;</span>
+      <span>The Ice House <em>✦</em> Cold-Blooded <em>✦</em> Apex Predators <em>✦</em> The Freezer <em>✦</em>&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ============================ IDENTITY / MANIFESTO ============================ -->
+  <section class="section identity" id="identity" aria-labelledby="identity-h">
+    <div class="wrap identity__head">
+      <span class="section-index">01 — IDENTITY</span>
+      <span class="eyebrow">The Science of the Game</span>
+    </div>
+    <div class="identity__lines wrap">
+      <p class="manifesto" id="identity-h" data-split>
+        Born in Bindura. Forged in science.
+        We don't chase the game —
+        <span class="accent">we engineer it.</span>
+        Every possession a hypothesis.
+        Every win, proof.
+      </p>
+    </div>
+
+    <div class="wrap pillars">
+      <article class="pillar" data-reveal>
+        <span class="pillar__n section-index">/01</span>
+        <h3 class="h-head">Precision</h3>
+        <p>A system, not a scramble. Spacing, reads, and rotations drilled to a science.</p>
+      </article>
+      <article class="pillar" data-reveal>
+        <span class="pillar__n section-index">/02</span>
+        <h3 class="h-head">Pressure</h3>
+        <p>40 minutes of ice-cold defense. We turn opponents into turnovers.</p>
+      </article>
+      <article class="pillar" data-reveal>
+        <span class="pillar__n section-index">/03</span>
+        <h3 class="h-head">Pride</h3>
+        <p>The Pride plays for Bindura. For the badge. For everyone who froze in the stands.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================ ROSTER ============================ -->
+  <section class="section roster" id="roster" aria-labelledby="roster-h">
+    <div class="wrap roster__head">
+      <div>
+        <span class="section-index">02 — THE PRIDE</span>
+        <h2 class="roster__title h-display" id="roster-h">THE<br><span class="stroke-text">ROSTER</span></h2>
+      </div>
+      <p class="roster__intro">Twelve. One pride. Drag, scroll, or swipe to scout the
+        athletes engineered to dominate the ZUSA hardwood.</p>
+    </div>
+
+    <div class="roster__track-wrap">
+      <div class="roster__track" id="roster-track" data-cursor="Drag">
+        <!-- Coach Brian · Head Coach -->
+        <article class="player-card player-card--photo player-card--coach" data-player data-hover data-cursor="Scout">
+          <span class="player-card__num">HC</span>
+          <div class="player-card__photo" data-pos="HC">
+            <img class="ph" src="assets/img/players/coach-brian.jpg" alt="Coach Brian, Head Coach, BUSE Panthers" loading="lazy" decoding="async">
+            <span class="player-card__tint"></span>
+          </div>
+          <div class="player-card__meta">
+            <span class="player-card__pos">Head Coach</span>
+            <h3 class="player-card__name">Coach<br>Brian</h3>
+            <div class="player-card__stats"><span>Leads <i>THE PRIDE</i></span></div>
+          </div>
+        </article>
+        <!-- EKS · 77 — dual-image hover/tap swap -->
+        <article class="player-card player-card--photo player-card--swap" data-player data-hover data-cursor="Swap" data-swap>
+          <span class="player-card__num">77</span>
+          <span class="player-card__swap" aria-hidden="true"><i></i><i></i>2 shots</span>
+          <div class="player-card__photo" data-pos="G/F">
+            <img class="ph ph-a" src="assets/img/players/eks-77-a.jpg" alt="EKS, number 77, BUSE Panthers" loading="eager" decoding="async">
+            <img class="ph ph-b" src="assets/img/players/eks-77-b.jpg" alt="EKS, number 77, in-game" loading="eager" decoding="async">
+            <span class="player-card__tint"></span>
+          </div>
+          <div class="player-card__meta">
+            <span class="player-card__pos">Guard / Forward</span>
+            <h3 class="player-card__name">EKS</h3>
+            <div class="player-card__stats"><span>14.6 <i>PPG</i></span><span>6.4 <i>AST</i></span></div>
+          </div>
+        </article>
+        <!-- Imlah · 12 -->
+        <article class="player-card player-card--photo" data-player data-hover data-cursor="Scout">
+          <span class="player-card__num">12</span>
+          <div class="player-card__photo" data-pos="F">
+            <img class="ph" src="assets/img/players/panther-12.jpg" alt="Imlah, number 12, BUSE Panthers" loading="lazy" decoding="async">
+            <span class="player-card__tint"></span>
+          </div>
+          <div class="player-card__meta">
+            <span class="player-card__pos">Forward</span>
+            <h3 class="player-card__name">Imlah</h3>
+            <div class="player-card__stats"><span>16.9 <i>PPG</i></span><span>7.7 <i>REB</i></span></div>
+          </div>
+        </article>
+        <!-- TamTam · 22 (new) -->
+        <article class="player-card player-card--photo" data-player data-hover data-cursor="Scout">
+          <span class="player-card__num">22</span>
+          <div class="player-card__photo" data-pos="PG">
+            <img class="ph" src="assets/img/players/tamtam-22.png" alt="TamTam, number 22, BUSE Panthers" loading="lazy" decoding="async">
+            <span class="player-card__tint"></span>
+          </div>
+          <div class="player-card__meta">
+            <span class="player-card__pos">Point Guard</span>
+            <h3 class="player-card__name">TamTam</h3>
+            <div class="player-card__stats"><span>21.0 <i>PPG</i></span><span>7.2 <i>AST</i></span></div>
+          </div>
+        </article>
+        <!-- Shumba · 21 (new) -->
+        <article class="player-card player-card--photo" data-player data-hover data-cursor="Scout">
+          <span class="player-card__num">21</span>
+          <div class="player-card__photo" data-pos="SG">
+            <img class="ph" src="assets/img/players/shumba-21.png" alt="Shumba, number 21, BUSE Panthers" loading="lazy" decoding="async">
+            <span class="player-card__tint"></span>
+          </div>
+          <div class="player-card__meta">
+            <span class="player-card__pos">Shooting Guard</span>
+            <h3 class="player-card__name">Shumba</h3>
+            <div class="player-card__stats"><span>18.0 <i>PPG</i></span><span>2.4 <i>STL</i></span></div>
+          </div>
+        </article>
+        <!-- Beast · 1 (new) -->
+        <article class="player-card player-card--photo" data-player data-hover data-cursor="Scout">
+          <span class="player-card__num">1</span>
+          <div class="player-card__photo" data-pos="PF">
+            <img class="ph" src="assets/img/players/beast-1.png" alt="Beast, number 1, BUSE Panthers" loading="lazy" decoding="async">
+            <span class="player-card__tint"></span>
+          </div>
+          <div class="player-card__meta">
+            <span class="player-card__pos">Power Forward</span>
+            <h3 class="player-card__name">Beast</h3>
+            <div class="player-card__stats"><span>12.0 <i>PPG</i></span><span>8.6 <i>REB</i></span></div>
+          </div>
+        </article>
+        <!-- squad (stylized — swap in photos as they arrive) -->
+        <article class="player-card" data-player data-hover data-cursor="Scout">
+          <span class="player-card__num">9</span>
+          <div class="player-card__photo" data-pos="SF"><svg aria-hidden="true"><use href="#ico-panther"></use></svg></div>
+          <div class="player-card__meta">
+            <span class="player-card__pos">Forward</span>
+            <h3 class="player-card__name">Farai<br>Ncube</h3>
+            <div class="player-card__stats"><span>19.4 <i>PPG</i></span><span>9.1 <i>REB</i></span></div>
+          </div>
+        </article>
+        <article class="player-card" data-player data-hover data-cursor="Scout">
+          <span class="player-card__num">45</span>
+          <div class="player-card__photo" data-pos="C"><svg aria-hidden="true"><use href="#ico-panther"></use></svg></div>
+          <div class="player-card__meta">
+            <span class="player-card__pos">Center</span>
+            <h3 class="player-card__name">Wisdom<br>Chataika</h3>
+            <div class="player-card__stats"><span>15.8 <i>PPG</i></span><span>3.2 <i>BLK</i></span></div>
+          </div>
+        </article>
+        <article class="player-card" data-player data-hover data-cursor="Scout">
+          <span class="player-card__num">13</span>
+          <div class="player-card__photo" data-pos="PF"><svg aria-hidden="true"><use href="#ico-panther"></use></svg></div>
+          <div class="player-card__meta">
+            <span class="player-card__pos">Forward</span>
+            <h3 class="player-card__name">Simba<br>Marufu</h3>
+            <div class="player-card__stats"><span>13.5 <i>PPG</i></span><span>8.4 <i>REB</i></span></div>
+          </div>
+        </article>
+        <article class="player-card" data-player data-hover data-cursor="Scout">
+          <span class="player-card__num">11</span>
+          <div class="player-card__photo" data-pos="G/F"><svg aria-hidden="true"><use href="#ico-panther"></use></svg></div>
+          <div class="player-card__meta">
+            <span class="player-card__pos">Guard / Forward</span>
+            <h3 class="player-card__name">Tanaka<br>Dube</h3>
+            <div class="player-card__stats"><span>12.0 <i>PPG</i></span><span>5.0 <i>AST</i></span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <p class="roster__hint wrap section-index" aria-hidden="true">← DRAG / SCROLL →</p>
+  </section>
+
+  <!-- ============================ NUMBERS ============================ -->
+  <section class="section numbers" id="numbers" aria-labelledby="numbers-h">
+    <div class="wrap numbers__head">
+      <span class="section-index">03 — BY THE NUMBERS</span>
+      <h2 class="h-display" id="numbers-h">PROOF, NOT<br><span class="accent">PROMISES</span></h2>
+    </div>
+    <div class="wrap numbers__grid">
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="21" data-suffix="">0</span>
+        <div class="stat__bar"><i></i></div>
+        <span class="stat__label">Wins this season</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="88" data-suffix=".6">0</span>
+        <div class="stat__bar"><i></i></div>
+        <span class="stat__label">Points per game</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="48" data-suffix="%">0</span>
+        <div class="stat__bar"><i></i></div>
+        <span class="stat__label">Field-goal accuracy</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="9" data-prefix="W" data-suffix="">0</span>
+        <div class="stat__bar"><i></i></div>
+        <span class="stat__label">Game win streak</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="14" data-prefix="+" data-suffix=".2">0</span>
+        <div class="stat__bar"><i></i></div>
+        <span class="stat__label">Avg. winning margin</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__num" data-count="6" data-suffix="">0</span>
+        <div class="stat__bar"><i></i></div>
+        <span class="stat__label">ZUSA championships</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SEASON / SCHEDULE ============================ -->
+  <section class="section season" id="season" aria-labelledby="season-h">
+    <div class="wrap season__head">
+      <span class="section-index">04 — THE SCHEDULE</span>
+      <h2 class="h-display" id="season-h">THE<br><span class="stroke-text">HUNT</span></h2>
+    </div>
+
+    <div class="wrap next-game" data-reveal>
+      <span class="next-game__tag eyebrow">Off Season</span>
+      <div class="next-game__body">
+        <div class="next-game__teams">
+          <span class="next-game__home">No Games Scheduled</span>
+          <span class="next-game__vs">Fixtures return next season</span>
+        </div>
+      </div>
+      <a href="#sponsor" class="btn btn--fill" data-hover>Back the Pride <span class="btn__icon">→</span></a>
+    </div>
+
+    <div class="wrap season__results">
+      <span class="eyebrow">Last Season Results</span>
+    </div>
+
+    <ul class="wrap fixtures">
+      <li class="fixture fixture--win" data-reveal data-hover>
+        <span class="fixture__date">SAT 14</span>
+        <span class="fixture__opp">vs NUST Highlanders</span>
+        <span class="fixture__venue">The Ice House</span>
+        <span class="fixture__score">W <b>94–71</b></span>
+      </li>
+      <li class="fixture fixture--win" data-reveal data-hover>
+        <span class="fixture__date">WED 11</span>
+        <span class="fixture__opp">@ MSU Warriors</span>
+        <span class="fixture__venue">Gweru</span>
+        <span class="fixture__score">W <b>88–69</b></span>
+      </li>
+      <li class="fixture fixture--win" data-reveal data-hover>
+        <span class="fixture__date">SAT 07</span>
+        <span class="fixture__opp">vs CUT Eagles</span>
+        <span class="fixture__venue">The Ice House</span>
+        <span class="fixture__score">W <b>102–80</b></span>
+      </li>
+      <li class="fixture fixture--loss" data-reveal data-hover>
+        <span class="fixture__date">WED 04</span>
+        <span class="fixture__opp">@ UZ Lions</span>
+        <span class="fixture__venue">Harare</span>
+        <span class="fixture__score">L <b>77–81</b></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============================ GALLERY ============================ -->
+  <section class="section gallery" id="gallery" aria-label="Moments">
+    <div class="wrap gallery__head">
+      <span class="section-index">05 — MOMENTS</span>
+      <h2 class="h-display">FROZEN<br><span class="accent">IN TIME</span></h2>
+    </div>
+    <div class="gallery__grid">
+      <figure class="gallery__tile gallery__tile--a gallery__tile--photo gallery__tile--video" data-hover data-cursor="Watch">
+        <video src="assets/video/zusa-gold-2025.mp4" autoplay muted loop playsinline preload="metadata" disablepictureinpicture></video>
+        <span class="gallery__cap"><b>01</b> 2025 — Panthers win ZUSA Gold</span>
+      </figure>
+      <figure class="gallery__tile gallery__tile--b gallery__tile--photo" data-hover data-cursor="View">
+        <img src="assets/img/gallery/quarter-final.jpg" alt="BUSE Panthers celebrate the ZUSA 2026 quarter-final win" loading="lazy" decoding="async">
+        <span class="gallery__cap"><b>02</b> ZUSA 2026 — quarter-final win</span>
+      </figure>
+      <figure class="gallery__tile gallery__tile--c gallery__tile--photo" data-hover data-cursor="View">
+        <img src="assets/img/gallery/mvp-skiddy.png" alt="Skiddy, 2025 ZUSA MVP, with his gold medal" loading="lazy" decoding="async">
+        <span class="gallery__cap"><b>03</b> 2025 ZUSA MVP — Skiddy</span>
+      </figure>
+      <figure class="gallery__tile gallery__tile--d gallery__tile--photo" data-hover data-cursor="View">
+        <img src="assets/img/gallery/russia-3x3.png" alt="BUSE Panthers at the Russia 3x3 tournament" loading="lazy" decoding="async">
+        <span class="gallery__cap"><b>04</b> BUSE Panthers — Russia 3&times;3</span>
+      </figure>
+      <figure class="gallery__tile gallery__tile--e gallery__tile--photo" data-hover data-cursor="View">
+        <img src="assets/img/gallery/fan-base.jpg" alt="BUSE Panthers fan base celebrating courtside" loading="lazy" decoding="async">
+        <span class="gallery__cap"><b>05</b> ZUSA 2026 — the fan base</span>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ SPONSOR ============================ -->
+  <section class="section join" id="sponsor" aria-labelledby="sponsor-h">
+    <div class="wrap join__inner">
+      <div class="join__copy">
+        <span class="eyebrow">Partnership · 2026 Season</span>
+        <h2 class="h-display" id="sponsor-h">SPONSOR<br><span class="accent">THE PRIDE</span></h2>
+        <p>Put your brand on Zimbabwe's most-watched university basketball program —
+          jersey placements, courtside boards, and social reach across a packed Ice House
+          and a growing national following.</p>
+        <div class="join__cta">
+          <a href="mailto:erickmureruswa@gmail.com?subject=BUSE%20Panthers%20Sponsorship" class="btn btn--fill" data-hover>Become a Sponsor <span class="btn__icon">→</span></a>
+          <a href="#" class="btn btn--ghost" data-hover>Request the Deck</a>
+        </div>
+      </div>
+      <div class="join__card" data-reveal data-hover>
+        <span class="join__card-tag section-index">Partner Package</span>
+        <span class="join__card-price"><b>10k+</b> reached / matchday</span>
+        <ul class="join__card-list">
+          <li>Logo on match jerseys &amp; warm-ups</li>
+          <li>Courtside &amp; banner placement at The Ice House</li>
+          <li>Brand features across socials &amp; livestreams</li>
+          <li>Named partner of every home fixture</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ BUILT BY ZIMDEVS ============================ -->
+  <section class="section zd" id="zimdevs" aria-labelledby="zd-h">
+    <div class="zd__glow" aria-hidden="true"></div>
+    <div class="wrap zd__inner">
+      <span class="eyebrow">Case Study · 2026</span>
+      <h2 class="zd__headline h-display" id="zd-h">BUILT BY<br><span class="zd__brand">ZIM<span class="accent">DEVS</span></span></h2>
+      <p class="zd__sub">We create websites that make organizations impossible to ignore.</p>
+
+      <p class="zd__lead">
+        This entire experience, the brand, the motion and the engineering, was designed
+        and built by <b>ZimDevs</b>. If a basketball team can look this unforgettable,
+        imagine what we can do for your business.
+      </p>
+
+      <div class="zd__grid">
+        <article class="zd__cell" data-reveal>
+          <span class="section-index">WHAT WE DO</span>
+          <ul>
+            <li>Brand &amp; identity design</li>
+            <li>Immersive web experiences</li>
+            <li>Motion &amp; interaction design</li>
+            <li>Frontend &amp; performance engineering</li>
+          </ul>
+        </article>
+        <article class="zd__cell" data-reveal>
+          <span class="section-index">WHY CLIENTS CHOOSE US</span>
+          <ul>
+            <li>Work that wins attention &amp; awards</li>
+            <li>48h to first deploy</li>
+            <li>Lighthouse-grade performance</li>
+            <li>Built from first principles, no templates</li>
+          </ul>
+        </article>
+        <article class="zd__cell" data-reveal>
+          <span class="section-index">INDUSTRIES WE SERVE</span>
+          <ul>
+            <li>Sports &amp; entertainment</li>
+            <li>Startups &amp; SaaS</li>
+            <li>Hospitality &amp; restaurants</li>
+            <li>Schools, NGOs &amp; enterprise</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="zd__cta-row">
+        <a href="https://zimdevs.co.zw" target="_blank" rel="noopener" class="btn btn--fill zd__cta" data-hover>
+          Start Your Project <span class="btn__icon">→</span>
+        </a>
+        <div class="zd__contact">
+          <a href="https://zimdevs.co.zw" target="_blank" rel="noopener" data-hover>zimdevs.co.zw</a>
+          <a href="mailto:hello@zimdevs.co.zw" data-hover>hello@zimdevs.co.zw</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <a class="foot__logo nav__logo" href="#hero" data-hover>
+      <svg aria-hidden="true"><use href="#ico-panther"></use></svg>
+      <span class="nav__logo-text">BUSE<b>·</b>PANTHERS</span>
+    </a>
+    <p class="foot__tag">Cold by nature. Lethal by design.<br>The Ice House · Bindura, Zimbabwe.</p>
+    <div class="foot__meta">
+      <span>© 2026 BUSE Panthers</span>
+      <span>Design &amp; build — <a href="https://zimdevs.co.zw" target="_blank" rel="noopener" class="accent" data-hover>ZimDevs</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================ SCRIPTS ============================ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
