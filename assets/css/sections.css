@@ -331,25 +331,6 @@
   .next-game__body { flex-direction: row; align-items: center; justify-content: space-between; flex: 1 1 100%; }
 }
 
-.season__results { margin-top: clamp(2rem, 1rem + 4vw, 3.5rem); margin-bottom: 1rem; }
-.fixtures { display: flex; flex-direction: column; }
-.fixture {
-  display: grid; grid-template-columns: auto 1fr auto; gap: 0.4rem 1rem; align-items: center;
-  padding: clamp(1rem, 0.5rem + 2vw, 1.6rem) 0;
-  border-top: var(--bw) solid var(--line);
-  transition: padding-left var(--d-norm) var(--e-out), background var(--d-norm);
-}
-.fixture:last-child { border-bottom: var(--bw) solid var(--line); }
-.fixture:hover { padding-left: 0.8rem; background: linear-gradient(90deg, rgba(34,211,238,0.06), transparent); }
-.fixture__date { font-family: var(--f-mono); font-size: 0.78rem; letter-spacing: 0.1em; color: var(--steel); grid-row: span 2; align-self: start; }
-.fixture__opp { font-family: var(--f-head); font-weight: 800; font-size: clamp(1.05rem, 1rem + 1.5vw, 1.5rem); text-transform: uppercase; }
-.fixture__venue { font-family: var(--f-mono); font-size: 0.7rem; color: var(--steel); letter-spacing: 0.08em; grid-column: 2; }
-.fixture__score { grid-column: 3; grid-row: span 2; font-family: var(--f-mono); font-size: 0.8rem; letter-spacing: 0.12em; text-align: right; color: var(--steel); }
-.fixture__score b { display: block; font-family: var(--f-head); font-weight: 900; font-size: clamp(1.1rem, 1rem + 1.5vw, 1.5rem); }
-.fixture--win .fixture__score b { color: var(--cyan); }
-.fixture--loss .fixture__score b { color: var(--frost-dim); }
-.fixture--win .fixture__score { color: var(--cyan); }
-
 /* ============================ GALLERY ============================ */
 .gallery__head { margin-bottom: clamp(2rem, 1rem + 4vw, 3.5rem); }
 .gallery__head h2 { font-size: var(--t-h1); }
